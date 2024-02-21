@@ -32,12 +32,10 @@ public class Application {
         Function<Integer, String> buzz = (integer) -> integer % 5 == 0 ? "Buzz" : null;
         Function<Integer, String> jazz = (integer) -> integer % 7 == 0 ? "Jazz" : null;
         Function<Integer, String> fizzBuzz = new CombinedStringFunction<>(fizz, buzz);
-        Function<Integer, String> buzzJazz = new CombinedStringFunction<>(buzz, jazz);
-        Function<Integer, String> fizzBuzzJazz = new CombinedStringFunction<>(fizzBuzz, jazz);
 
-        functions.add(fizzBuzzJazz);
+        functions.add(new CombinedStringFunction<>(fizzBuzz, jazz));
+        functions.add(new CombinedStringFunction<>(buzz, jazz));
         functions.add(fizzBuzz);
-        functions.add(buzzJazz);
         functions.add(fizz);
         functions.add(buzz);
         functions.add(jazz);
