@@ -5,6 +5,7 @@ import java.util.function.Function;
 public class CombinedStringFunction<T> implements Function<T, String> {
     private final Function<T, String> function1;
     private final Function<T, String> function2;
+    
     public CombinedStringFunction(Function<T, String> function1, Function<T, String> function2) {
         this.function1 = function1;
         this.function2 = function2;
