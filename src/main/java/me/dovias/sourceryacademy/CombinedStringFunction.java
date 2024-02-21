@@ -14,8 +14,14 @@ public class CombinedStringFunction<T> implements Function<T, String> {
     @Override
     public String apply(T object) {
         String function1Output = function1.apply(object);
+        if (function1Output == null) {
+            return null;
+        }
         String function2Output = function2.apply(object);
+        if (function2Output == null) {
+            return null;
+        }
 
-        return function1Output != null && function2Output != null ? function1Output + function2Output : null;
+        return function1Output + function2Output;
     }
 }
