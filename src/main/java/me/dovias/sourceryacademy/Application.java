@@ -47,9 +47,9 @@ public class Application {
         if (args.length < 1) {
             return;
         }
-        int n;
+        int length;
         try {
-            n = Integer.parseUnsignedInt(args[0]);
+            length = Integer.parseUnsignedInt(args[0]);
         } catch (NumberFormatException exception) {
             return;
         }
@@ -61,7 +61,7 @@ public class Application {
         (not stating that its very performant with all those heap function objects)
         */
         StringBuilder builder = new StringBuilder();
-        executeFor(n, (string) -> builder.append(string).append(' '), getFunctions(), Objects::toString);
+        executeFor(length, (string) -> builder.append(string).append(' '), getFunctions(), Objects::toString);
         System.out.println(builder.substring(0, builder.length() - 1));
     }
 }
