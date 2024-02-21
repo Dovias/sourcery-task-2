@@ -34,6 +34,7 @@ public class Application {
         Function<Integer, String> fizzBuzz = new CombinedStringFunction<>(fizz, buzz);
 
         functions.add(new CombinedStringFunction<>(fizzBuzz, jazz));
+        functions.add(new CombinedStringFunction<>(fizz, jazz));
         functions.add(new CombinedStringFunction<>(buzz, jazz));
         functions.add(fizzBuzz);
         functions.add(fizz);
