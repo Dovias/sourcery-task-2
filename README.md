@@ -1,5 +1,5 @@
 # sourcery-task-2
-My humble attempt to solve Sourcery Academy For Full-Stack 2024 bonus task for the upcoming admission test. This solution uses Java's functional programming to make it as much extensible as possible.
+My humble attempt to solve Sourcery Academy For Full-Stack 2024 bonus task for the upcoming admission test. This solution uses Java's functional programming and generics to make it as much extensible as possible.
 
 # Building 🛠️
 First of all clone the git project from this git repository using `git clone https://github.com/Dovias/sourcery-task-2.git` command. Make sure you have `git` installed on your computer.
